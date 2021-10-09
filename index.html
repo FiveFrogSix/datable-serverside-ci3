@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datatable Serverside</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
+</head>
+<body class="bg-light">
+    <div class="container-fluid p-0">
+        <ul class="nav justify-content-end bg-dark text-light ">
+            <li class="nav-item">
+              <a class="nav-link link-light" aria-current="page" href="https://github.com/FiveFrogSix" target="_blank"><i class="fab fa-github"></i> FiveFrogSix</a>
+            </li>
+        </ul>
+        <div class="col-8 mx-auto">
+            <h1 class="text-center">Datatable <span class="fw-bold text-warning">Serverside</span></h1>
+        </div>
+
+        <div class="col-8 mx-auto rounded clearfix">
+            <span class="fs-5">ตาราง</span>
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="float-end">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">หน้าแรก</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">ตาราง</li>
+                </ol>
+              </nav>
+        </div>
+
+        <div class="col-8 mx-auto bg-white rounded p-3">
+            <table id="info_table" class="table table-hover table-striped table-bordered w-100">
+                <thead>
+                    <tr>
+                        <th>ชื่อ</th>
+                        <th>แผนก</th>
+                        <th>เงินเดือน</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td>11</td>
+                        <td>22</td>
+                        <td> 
+                            
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="node_modules/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+    <script src="asset/js/main.js"></script>
+</html>

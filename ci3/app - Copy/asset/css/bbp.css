@@ -1,0 +1,316 @@
+:root {
+  --sidewidth: 58px;
+  --sidewidth2: 280px;
+  --marginNavLink: 0rem;
+  --paddingNavLink: 0.5rem 0.8rem;
+  --PrimaryColor1: #fb2098;
+  --SecondaryColor1: #fcfcfc2f;
+  --SecondaryColor2: #a8a8a8;
+  --fontWhite: #f0f0f0;
+  --tranDuration: .3s;
+  --tranFontDuration: .4s;
+  --bodyFont: 15px;
+  --fontBrandLogo: 1rem;
+  --fontBrandLogoTag: 18px;
+  --paddingBrandLogo: 1rem;
+  --fontColorBrand: #fff;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  height: 100vh;
+  width: 100wh;
+  font-family: 'K2D', sans-serif;
+  font-size: var(--bodyFont);
+}
+
+body.sidebar-expand .bbp-sidebar {
+  width: var(--sidewidth2);
+  -webkit-transform: translate(0%);
+          transform: translate(0%);
+}
+
+body.sidebar-expand .nav-label {
+  display: inline;
+  opacity: 1 !important;
+}
+
+@media only screen and (min-width: 576px) {
+  body.sidebar-expand .bbp-sidebar {
+    width: var(--sidewidth2);
+  }
+  body.sidebar-expand .bbp-navbar {
+    width: calc(100% - var(--sidewidth2));
+    margin-left: var(--sidewidth2);
+  }
+  body.sidebar-expand .bbp-container {
+    width: calc(100% - var(--sidewidth2));
+    margin-left: var(--sidewidth2);
+  }
+  body.sidebar-expand .nav-label {
+    display: inline;
+    opacity: 1 !important;
+  }
+}
+
+input, textarea, button, select {
+  -webkit-box-shadow: 0px 0px 0px !important;
+          box-shadow: 0px 0px 0px !important;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn.btn-fixed-1 {
+  width: 100%;
+}
+
+@media only screen and (min-width: 576px) {
+  .btn.btn-fixed-1 {
+    width: 200px;
+  }
+}
+
+.btn.btn-fixed-modal {
+  width: 40%;
+}
+
+@media only screen and (min-width: 576px) {
+  .btn.btn-fixed-modal {
+    width: 160px;
+  }
+}
+
+.bbp-wrapper {
+  height: 100%;
+  position: relative;
+}
+
+.bbp-wrapper.wrap-primary {
+  background-color: #E9ECEF;
+}
+
+.bbp-sidebar {
+  height: 100vh;
+  z-index: 1020;
+  width: var(--sidewidth);
+  -webkit-transform: translate(-100%);
+          transform: translate(-100%);
+  -webkit-transition: width var(--tranDuration), -webkit-transform 0.6s;
+  transition: width var(--tranDuration), -webkit-transform 0.6s;
+  transition: width var(--tranDuration), transform 0.6s;
+  transition: width var(--tranDuration), transform 0.6s, -webkit-transform 0.6s;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.bbp-sidebar .nav-link {
+  color: #f1f1f1 !important;
+}
+
+.bbp-sidebar hr {
+  margin: 0.5rem 0;
+}
+
+@media only screen and (min-width: 576px) {
+  .bbp-sidebar {
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: block;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
+    width: var(--sidewidth);
+    -webkit-transition: width var(--tranDuration);
+    transition: width var(--tranDuration);
+  }
+  .bbp-sidebar:hover {
+    width: var(--sidewidth2);
+  }
+  .bbp-sidebar:hover .nav-label {
+    display: inline;
+    opacity: 1 !important;
+  }
+}
+
+.bbp-navbar {
+  width: 100%;
+}
+
+@media only screen and (min-width: 576px) {
+  .bbp-navbar {
+    width: calc(100% - var(--sidewidth));
+    margin-left: var(--sidewidth);
+    -webkit-transition: width var(--tranDuration), margin-left var(--tranDuration);
+    transition: width var(--tranDuration), margin-left var(--tranDuration);
+  }
+}
+
+.bbp-container {
+  width: 100%;
+  padding: 12px;
+}
+
+@media only screen and (min-width: 576px) {
+  .bbp-container {
+    padding: 12px;
+    width: calc(100% - var(--sidewidth));
+    margin-left: var(--sidewidth);
+    -webkit-transition: width var(--tranDuration), margin-left var(--tranDuration);
+    transition: width var(--tranDuration), margin-left var(--tranDuration);
+  }
+}
+
+.content-login {
+  color: #666666;
+  padding: 5%;
+  width: 100%;
+}
+
+@media only screen and (min-width: 576px) {
+  .content-login {
+    color: #666666;
+    padding: 20px;
+    width: 420px;
+  }
+}
+
+.nav-label {
+  position: absolute;
+  overflow: hidden;
+  display: inline;
+  margin-left: 0.6rem;
+  opacity: 0;
+  -webkit-transition: opacity var(--tranFontDuration);
+  transition: opacity var(--tranFontDuration);
+  width: 80%;
+}
+
+.nav-link {
+  padding: var(--paddingNavLink);
+  margin: var(--marginNavLink);
+  -webkit-transition: background-color .8s;
+  transition: background-color .8s;
+}
+
+.nav-link:hover {
+  color: var(--fontWhite) !important;
+  background-color: var(--SecondaryColor1);
+}
+
+.nav-link.active {
+  color: var(--fontWhite) !important;
+  background-color: var(--PrimaryColor1) !important;
+}
+
+.bbp-sidebar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.bbp-sidebar::-webkit-scrollbar-thumb {
+  background: var(--PrimaryColor1);
+}
+
+.bbp-sidebar::-webkit-scrollbar-track {
+  background: var(--SecondaryColor);
+}
+
+.bbp-sidebar {
+  scrollbar-face-color: var(--PrimaryColor1);
+  scrollbar-track-color: var(--SecondaryColor);
+}
+
+.brand-logo {
+  white-space: nowrap;
+  padding: var(--paddingBrandLogo);
+  font-size: var(--fontBrandLogo);
+  color: var(--fontColorBrand) !important;
+}
+
+.brand-logo p {
+  font-size: var(--fontBrandLogoTag);
+}
+
+.side-backdrop {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.bbp-sidebar > nav > ul > li > a > p > .end {
+  position: absolute;
+  top: .3rem;
+  right: 0;
+}
+
+.bbp-sidebar > nav > ul > li > ul > li > a.active {
+  color: #666666 !important;
+  background-color: #ffffffe5 !important;
+}
+
+.icon-end {
+  position: absolute !important;
+  right: 0 !important;
+  z-index: 50 !important;
+}
+
+.collapsing {
+  margin: 0;
+  display: block;
+  overflow: hidden;
+  -webkit-transition: height .20s ease;
+  transition: height .20s ease;
+}
+
+.collapsing li > a > .nav-label {
+  margin-left: 0.35rem;
+  position: relative;
+  z-index: 100;
+}
+
+.collapse > li {
+  width: 100%;
+}
+
+.nav-link > p > i {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.nav-link.open > p > i {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.ui-autocomplete.ui-h-50 {
+  overflow: hidden;
+  overflow-y: auto !important;
+  height: 300px !important;
+}
+
+.dropdown-btn-width > li .dropdown-item {
+  width: 240px;
+}
+
+.fc-grey {
+  color: #777777;
+}
+/*# sourceMappingURL=bbp.css.map */
